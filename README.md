@@ -1,4 +1,4 @@
-# hero
+# Hero Widget Demo
 
 A new Flutter project.
 
