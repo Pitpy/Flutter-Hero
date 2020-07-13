@@ -53,6 +53,7 @@ class ItemList extends StatelessWidget {
                                 builder: (context) => Detail(
                                   id: e['id'],
                                   name: e['name'],
+                                  power: e['power'],
                                   photo: e['img'],
                                 ),
                               ),

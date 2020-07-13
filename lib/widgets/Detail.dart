@@ -1,10 +1,12 @@
 import "package:flutter/material.dart";
 
 class Detail extends StatelessWidget {
-  const Detail({Key key, this.id, this.name, this.photo}) : super(key: key);
+  const Detail({Key key, this.id, this.name, this.power, this.photo})
+      : super(key: key);
 
   final int id;
   final String name;
+  final String power;
   final String photo;
 
   Widget build(BuildContext context) {
@@ -19,7 +21,8 @@ class Detail extends StatelessWidget {
               margin: EdgeInsets.only(top: 50, bottom: 30),
               child: Text(
                 this.name,
-                style: TextStyle(fontSize: 28, color: Colors.purple),
+                style: TextStyle(
+                    fontSize: 35, color: Colors.purple, fontFamily: 'saiyan'),
               ),
             ),
             Stack(
@@ -45,6 +48,21 @@ class Detail extends StatelessWidget {
                 ),
               ],
             ),
+            Container(
+                margin: EdgeInsets.only(top: 50, bottom: 30),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      'Power scale: ',
+                      style: TextStyle(fontSize: 28, color: Colors.black54),
+                    ),
+                    Text(
+                      this.power,
+                      style: TextStyle(fontSize: 35, color: Colors.red),
+                    ),
+                  ],
+                )),
           ],
         ),
       ),
